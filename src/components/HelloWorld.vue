@@ -1,134 +1,166 @@
-<script setup>
-</script>
-
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Restaurante</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item dropdown" @click="toggleDropdown('menuDia')">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button">Menú del Día</a>
+            <ul v-if="dropdowns.menuDia" class="dropdown-menu show">
+              <li><a class="dropdown-item" href="#">Desayunos</a></li>
+              <li><a class="dropdown-item" href="#">Comidas</a></li>
+              <li><a class="dropdown-item" href="#">Cenas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" @click="toggleDropdown('promociones')">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button">Promociones</a>
+            <ul v-if="dropdowns.promociones" class="dropdown-menu show">
+              <li><a class="dropdown-item" href="#">2x1</a></li>
+              <li><a class="dropdown-item" href="#">Descuentos</a></li>
+              <li><a class="dropdown-item" href="#">Ofertas especiales</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" @click="toggleDropdown('categoriasMenu')">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button">Categorías del Menú</a>
+            <ul v-if="dropdowns.categoriasMenu" class="dropdown-menu show">
+              <li><a class="dropdown-item" href="#">Comidas</a></li>
+              <li><a class="dropdown-item" href="#">Bebidas</a></li>
+              <li><a class="dropdown-item" href="#">Postres</a></li>
+              <li><a class="dropdown-item" href="#">Snacks</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Nosotros</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="background-container d-flex justify-content-center align-items-center">
+    <div class="content-container">
+      <div class="text-section">
+        <h1>"El Alma De Tlaxiaco"</h1>
+        <p>Disfruta de la mejor comida con ingredientes frescos y recetas únicas.</p>
+      </div>
+      <div class="image-section">
+        <img src="https://img.freepik.com/vector-gratis/diseno-carta-restaurante-vintage_23-2147491098.jpg?t=st=1742435995~exp=1742439595~hmac=6d2027b66006cbcb963d89f73f3ede7482f55c287aa3e1bef008464b7ded7024&w=1480" alt="Imagen de restaurante" class="restaurant-image" />
+      </div>
     </div>
   </div>
-</nav>
-  <div class="container">
-    <h1 class="text-center">RESTAURANTE</h1>
-    
-    <!-- Inicio del primer row (con 3 tarjetas alineadas) -->
-    <div class="row">
-      <!-- Cuadro de BEBIDA 1 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h6>BEBIDA</h6>
-          </div>
-          <div class="card-body"></div>
-          <p class="card-text">Sabores irresistibles, hechos con pasión..</p>
-        </div>
-      </div>
 
-      <!-- Cuadro de POSTRE -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h6>POSTRE</h6>
-          </div>
-          <div class="card-body"></div>
-          <p class="card-text">El toque dulce que tu día necesitaba.</p>
-        </div>
-      </div>
-
-      <!-- Cuadro de BEBIDA 2 -->
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-header">
-            <h6>BEBIDA</h6>
-          </div>
-          <div class="card-body"></div>
-          <p class="card-text">Refresca tu día con nuestras bebidas exclusivas.</p>
-        </div>
-      </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="text-white">© 2025 Restaurante, Inc.</p>
     </div>
-    <!-- Cierre del primer row -->
-
-    <!-- Inicio del segundo row (con 3 tarjetas de ejemplo de gatitos) -->
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="https://imgs.search.brave.com/KD5vHtvYgLx3a6vymN2ZfHY3v34P5MjZXyfpeHsvmpg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tYm1h/cmNvYmV0ZXRhLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/NC8wOC9JTUdfMzc5/MC1jb3BpYS53ZWJw" class="card-img-top" alt="Gato animado">
-          <div class="card-body text-center">
-            <p class="card-text">La comida que hace sonreír a tu paladar.</p>
-            <button class="btn-warning">Comida</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="https://imgs.search.brave.com/RAUteC_pHWsrvs1hG_9lF12FtLSrsAPolmzXSgw4Jyk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50LmVsbXVlYmxl/LmNvbS9tZWRpby8y/MDIzLzAzLzE1L3Bv/c3RyZXNfMjZiMTU3/YzBfMDA1NDM4MzBf/MjMwMzE1MTE0OTUy/XzkwMHg5MDAuanBn" class="card-img-top" alt="Gato animado">
-          <div class="card-body text-center">
-            <p class="card-text">Bebidas que te llenan de energía y sabor..</p>
-            <button class="btn-warning">Postre</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem;">
-          <img src="https://imgs.search.brave.com/hWOMr9SKwBw_v28DXaUI_rj6yo-cnLnZUcDbBAaOtQs/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmluZWRpbmluZ2xv/dmVycy5jb20vZXMv/c2l0ZXMvZy9maWxl/cy94a25mZGsxNzA2/L2ZpbGVzLzIwMjIt/MDYvY28lQ0MlODFj/dGVsZXMtZGUtZnJ1/dGFzLW1vaml0by1m/cnV0YS1wYXNpb24l/QzIlQTlpU3RvY2su/anBn" class="card-img-top" alt="Gato animado">
-          <div class="card-body text-center">
-            <p class="card-text">Déjate consentir con el postre de tus sueños..</p>
-            <button class="btn-warning">Bebida</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Cierre del segundo row -->
-    <div class="container">
-  <footer class="py-3 my-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-    <p class="text-center text-muted">© 2022 Company, Inc</p>
   </footer>
-</div>
-  </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      dropdowns: {
+        menuDia: false,
+        promociones: false,
+        categoriasMenu: false
+      }
+    };
+  },
+  methods: {
+    toggleDropdown(menu) {
+      this.dropdowns[menu] = !this.dropdowns[menu];
+    }
+  }
+};
+</script>
+
 <style scoped>
-/* Estilos específicos para este componente */
-.container {
-  padding: 20px;
+/* Estilos generales */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #5a189a; /* Morado intenso */
+  padding: 10px;
+}
+
+/* Contenedor con color de fondo */
+.background-container {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(to bottom, #f5e6ff, #d8a4d3); /* Degradado suave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de contenido principal */
+.content-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Sección de texto */
+.text-section {
+  max-width: 400px;
+  color: #5a189a;
+  font-weight: bold;
+}
+.text-container {
+    text-align: center; /* Centra el título */
+}
+
+.text-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-container p {
+    text-align: justify; /* Justifica el texto */
+    max-width: 500px; /* Limita el ancho para mejor lectura */
+    margin: 0 auto; /* Centra el párrafo */
+}
+
+
+/* Sección de imagen */
+.image-section {
+  display: flex;
+  justify-content: center;
+}
+
+.restaurant-image {
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #3d0066; /* Vino oscuro */
+  padding: 10px;
+  margin-top: auto;
 }
 </style>
