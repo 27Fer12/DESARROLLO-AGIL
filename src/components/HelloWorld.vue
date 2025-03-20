@@ -17,31 +17,31 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link text-white active" href="#">Inicio</a>
+            <a class="nav-link text-white active" href="HelloWorld.vue">Inicio</a>
           </li>
           <li class="nav-item dropdown" @click="toggleDropdown('menuDia')">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button">Menú del Día</a>
             <ul v-if="dropdowns.menuDia" class="dropdown-menu show">
-              <li><a class="dropdown-item" href="#">Desayunos</a></li>
-              <li><a class="dropdown-item" href="#">Comidas</a></li>
-              <li><a class="dropdown-item" href="#">Cenas</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Desayunos</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Comidas</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Cenas</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown" @click="toggleDropdown('promociones')">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button">Promociones</a>
             <ul v-if="dropdowns.promociones" class="dropdown-menu show">
-              <li><a class="dropdown-item" href="#">2x1</a></li>
-              <li><a class="dropdown-item" href="#">Descuentos</a></li>
-              <li><a class="dropdown-item" href="#">Ofertas especiales</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">2x1</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Descuentos</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Ofertas especiales</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown" @click="toggleDropdown('categoriasMenu')">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button">Categorías del Menú</a>
             <ul v-if="dropdowns.categoriasMenu" class="dropdown-menu show">
-              <li><a class="dropdown-item" href="#">Comidas</a></li>
-              <li><a class="dropdown-item" href="#">Bebidas</a></li>
-              <li><a class="dropdown-item" href="#">Postres</a></li>
-              <li><a class="dropdown-item" href="#">Snacks</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Comidas</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Bebidas</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Postres</a></li>
+              <li><a class="dropdown-item" href="HelloWorld.vue">Snacks</a></li>
             </ul>
           </li>
           <li class="nav-item">
