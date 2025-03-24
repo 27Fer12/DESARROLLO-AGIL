@@ -53,6 +53,7 @@
 
       <div class="text-center mt-4">
         <p class="small">&copy; 2025 Restaurante Delicioso. Todos los derechos reservados.</p>
+        <p> Hecho por Sandra Gabriela Velasco Guzman</p>
       </div>
     </div>
   </footer>

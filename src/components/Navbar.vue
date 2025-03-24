@@ -64,13 +64,13 @@ export default {
 
 <style scoped>
 .custom-navbar {
-  background-color: #8e44ad; /* Color lavanda sutil */
-  padding: 10px;
+  background-color: #110df1; /* Color lavanda sutil */
+  padding: 25px;
   transition: background-color 0.3s ease;
 }
 
 .custom-navbar:hover {
-  background-color: #9b59b6; /* Color ligeramente más oscuro en hover */
+  background-color: #3e5cf7; /* Color ligeramente más oscuro en hover */
 }
 
 .navbar-nav .nav-item .nav-link {

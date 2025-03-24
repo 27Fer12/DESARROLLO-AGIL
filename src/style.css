@@ -10,4 +10,6 @@
     background-color: #dcd8f1; /* Color de fondo suave */
     margin: 20px 0;
   }
-  
+  body {
+    background-color: #f9a8e4; /* Un color gris claro, puedes cambiarlo */
+}
