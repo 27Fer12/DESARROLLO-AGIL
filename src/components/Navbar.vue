@@ -7,9 +7,10 @@
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
+        :aria-expanded="dropdowns.menuDia || dropdowns.promociones ? 'true' : 'false'"
         aria-controls="navbarSupportedContent"
-        aria-expanded="false"
         aria-label="Toggle navigation"
+        aria-haspopup="true"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,7 +64,38 @@ export default {
 
 <style scoped>
 .custom-navbar {
-  background-color: #5a189a;
+  background-color: #8e44ad; /* Color lavanda sutil */
   padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar:hover {
+  background-color: #9b59b6; /* Color ligeramente más oscuro en hover */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #f8c291; /* Color dorado claro al pasar el mouse */
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  background-color: #8e44ad;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-item .dropdown-menu.show {
+  opacity: 1;
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  opacity: 0;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
 }
 </style>

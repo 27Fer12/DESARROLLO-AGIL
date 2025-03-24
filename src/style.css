@@ -1,0 +1,13 @@
+#carouselExampleControls {
+
+    width: 60%;
+      margin: auto;
+}
+
+.separador {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #dcd8f1; /* Color de fondo suave */
+    margin: 20px 0;
+  }
+  

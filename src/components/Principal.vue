@@ -1,20 +1,14 @@
 <template>
-  <div class="background-container d-flex justify-content-center align-items-center">
-    <div class="content-container">
-      <div class="text-section">
-        <h1>"El Alma De Tlaxiaco"</h1>
-        <p>Disfruta de la mejor comida con ingredientes frescos y recetas únicas.</p>
-      </div>
-      <div class="image-section">
-        <img
-          src="https://img.freepik.com/vector-gratis/diseno-carta-restaurante-vintage_23-2147491098.jpg"
-          alt="Imagen de restaurante"
-          class="restaurant-image"
-        />
+  <div class="d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURJVWZ2cG36R4OwCR-ORbS4Bp92W3ZRCtJw&s" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text">"Descubre la esencia de Tlaxiaco en cada platillo. En El Alma de Tlaxiaco, combinamos tradición y elegancia para ofrecerte una experiencia gastronómica única. Disfruta de sabores auténticos en un ambiente sofisticado."</p>
       </div>
     </div>
   </div>
 </template>
+
 
 <style scoped>
 .background-container {
